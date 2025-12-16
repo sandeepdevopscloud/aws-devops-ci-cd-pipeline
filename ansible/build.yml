@@ -1,0 +1,14 @@
+---
+- hosts: ansible
+  
+  tasks:
+  - name: Build the Dockerfile
+    command: docker build -t reg_app .
+    args:
+      chdir: /opt/docker
+
+  - name: Tag the image name
+    command: docker tag reg_app dockersandeep7013/reg_app
+
+  - name: Push the image into DockerHub
+    command: docker push dockersandeep7013/reg_app
