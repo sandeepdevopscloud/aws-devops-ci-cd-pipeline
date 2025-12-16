@@ -1,0 +1,19 @@
+---
+- hosts: docker
+
+  tasks:
+
+  - name: Stop exiting container
+    command: docker stop c1
+    ignore_errors: yes
+
+  - name: Remove exiting container
+    command: docker rm c1
+    ignore_errors: yes
+
+  - name: Remove image
+    command: docker rmi dockersandeep7013/reg_app
+    ignore_errors: yes
+
+  - name: Create a container
+    command: docker run -d --name c1 -p 8081:8080 dockersandeep7013/reg_app
