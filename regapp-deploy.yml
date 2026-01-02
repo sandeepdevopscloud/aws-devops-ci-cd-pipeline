@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app-lb
+  template:
+    metadata:
+      labels:
+        app: my-app-lb
+    spec:
+      containers:
+      - name: my-container
+        image: dockersandeep7013/reg_app
+        ports:
+        - containerPort: 8080
