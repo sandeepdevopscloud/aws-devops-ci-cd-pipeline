@@ -42,3 +42,6 @@ Kubernetes manages the running container and ensures the application is running 
 - How to deploy applications on Kubernetes (EKS)
 - Basics of using Ansible for automation
 - Practical understanding of AWS cloud services
+
+## Project Overview
+In this project i covered all the tools like for continous Integration - Jenkins, To Build used Maven , for Automation Ansible, Containeration used Docker, for Container Achistarion used Kubernetes ,and also for Source code maganegment used Github
